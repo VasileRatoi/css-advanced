@@ -1,0 +1,35 @@
+$mobile: 500px;
+$tablet: 768px;
+$desktop: 1200px;
+$desktop-wide: 1400px;
+
+$mobile-max: $mobile - 1;
+$tablet-max: $tablet - 1;
+$desktop-max: $desktop - 1;
+$desktop-wide-max: $desktop-wide - 1;
+
+.section {
+  padding-top: 20px;
+
+  @include breakpoint($desktop) {
+    padding-top: 40px; // va aplica de la 1200 in sus
+  }
+}
+
+// exemplu desktop-first
+.section__title {
+  font-size: 20px;
+
+  @include breakpoint(max-width $tablet) {
+    font-size: 14px;  // va aplica doar de la 768 in jos
+  }
+}
+
+// exemplu de range
+.section__content {
+  margin-bottom: 20px;
+
+  @include breakpoint($tablet $desktop) {
+    margin-bottom: 40px; // va aplica doar intre 768 si pana la 1200
+  }
+}
