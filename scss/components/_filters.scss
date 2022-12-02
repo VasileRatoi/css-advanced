@@ -1,0 +1,38 @@
+.filter-box {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.filter-box--grayscale {
+  &:hover {
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.filter-box--blur {
+  &:hover {
+    img {
+      filter: blur(10px);
+    }
+  }
+}
+
+.filter-box--hue-rotate {
+  &:hover {
+    img {
+      filter: hue-rotate(180deg);
+    }
+  }
+}
+
+.filter-box--drop-shadow {
+  &:hover {
+    img {
+      filter: drop-shadow(5px 5px 3px green);
+    }
+  }
+}
